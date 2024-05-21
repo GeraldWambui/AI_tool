@@ -40,7 +40,7 @@
                 android:id="@+id/etUserName"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:hint="Username"
+                android:hint="Business name"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="128dp"
                 android:layout_marginEnd="32dp"
