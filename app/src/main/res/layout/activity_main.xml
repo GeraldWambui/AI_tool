@@ -1,74 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/back_color"
     tools:context=".MainActivity">
 
-<!--    <com.google.android.flexbox.FlexboxLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:alignContent="flex_start"-->
-<!--        app:alignItems="stretch"-->
-<!--        app:flexWrap="wrap"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent">-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/idRVChats"
+        android:layout_above="@id/idRLMsg"/>
 
-<!--        <androidx.appcompat.widget.AppCompatButton-->
-<!--            android:id="@+id/button1"-->
-<!--            style="@android:style/Widget.Button"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:background="@drawable/intro_btn_background"-->
-<!--            android:gravity="center"-->
-<!--            android:padding="15dp"-->
-<!--            android:text="Foods"-->
-<!--            android:textColor="@color/white"-->
-<!--            android:textSize="20sp"-->
-<!--            app:layout_flexGrow="1" />-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idRLMsg"
+        android:layout_alignParentBottom="true">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/idEdtMessage"
+            android:layout_centerInParent="true"
+            android:layout_margin="3dp"
+            android:layout_toLeftOf="@+id/idFABSend"
+            android:hint="Enter message"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"/>
 
-<!--        <androidx.appcompat.widget.AppCompatButton-->
-<!--            android:id="@+id/button3"-->
-<!--            style="@android:style/Widget.Button"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:background="@drawable/intro_btn_background"-->
-<!--            android:gravity="center"-->
-<!--            android:padding="15dp"-->
-<!--            android:text="Clothings"-->
-<!--            android:textColor="@color/white"-->
-<!--            android:textSize="20sp"-->
-<!--            app:layout_flexGrow="1" />-->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/idFABSend"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_send"
+            android:layout_margin="4dp"
+            app:fabCustomSize="45dp"
+            android:backgroundTint="@color/fab_color"
+            android:tint="@color/white"
+            android:layout_alignParentRight="true"/>
 
-<!--        <androidx.appcompat.widget.AppCompatButton-->
-<!--            android:id="@+id/button4"-->
-<!--            style="@android:style/Widget.Button"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:background="@drawable/intro_btn_background"-->
-<!--            android:gravity="center"-->
-<!--            android:padding="15dp"-->
-<!--            android:text="Fashion"-->
-<!--            android:textColor="@color/white"-->
-<!--            android:textSize="20sp"-->
-<!--            app:layout_flexGrow="1" />-->
+    </RelativeLayout>
 
-<!--        <androidx.appcompat.widget.AppCompatButton-->
-<!--            android:id="@+id/button5"-->
-<!--            style="@android:style/Widget.Button"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:background="@drawable/intro_btn_background"-->
-<!--            android:gravity="center"-->
-<!--            android:padding="15dp"-->
-<!--            android:text="Mobile phone and accessories"-->
-<!--            android:textColor="@color/white"-->
-<!--            android:textSize="20sp"-->
-<!--            app:layout_flexGrow="1" />-->
 
-<!--    </com.google.android.flexbox.FlexboxLayout>-->
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
